@@ -1,19 +1,18 @@
 # net.c
-## Dec 27 2025
 
-### This is a learning project, to shake the rust off and prepare for my next semester, as well as learning/touching on some important topics such as:
- 1) Parsing virtual file systems (/proc)
- 2) Memory management, "leapfrogging" ,when to use free(), how malloc() works with sizeof() and type casting
- 3) Bit manipulation (shifting and masking bits to convert network byte order to human-readable)
- 4) Pointer proficiency.
- 5) Basic single linked lists.
+## Purpose
+This project is a learing journal of sorts, it started before my Data Structures course Spring of 26, and as I learn more I update this project with what I learned in/out of class whenever I have the time.
 
+## Update March 19th 2026
+- Moved utility functions outside of net.c and into neth.c, and the prototype functions into neth.h as well as struct type and defines.
+- Changed from singly linked list to dynamic array;
+- Linked lists had caused memory fragmentation and cache misses because of the non-contiguous node allocation, while dynamic arrays are contiguous in memory, making iteration faster with better cache locality, and less per-element overhead.
 
 ## Compilation:
 I like to use `gcc`:
 
 ```bash
-gcc -o net.out net.c
+gcc -o net net.c neth.c
 ```
 
 ## Basic usage: 
@@ -27,4 +26,5 @@ gcc -o net.out net.c
  1) Better connection filtering and search by parsing dynamic command-line args. (optarg or getopt).
  2) Live monitoring of /proc/net/tcp that updates every 2-3 seconds instead of a static capture.
  3) DNS name resolution.
- 4) Export to JSON or CSV. 
+ 4) Export to JSON or CSV.
+ 5) Maybe utilize eBPF in the future for faster captures. 

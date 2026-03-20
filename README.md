@@ -22,7 +22,7 @@ gcc -o net net.c neth.c
  ./net -l : List connections with "LISTENING" state.
 ```
 ## To be implemented:
-
+Priority: get rid of get inode by pid function because the time complexity is horrendous, switching to hash table for constant/linear time complexity.
  1) Better connection filtering and search by parsing dynamic command-line args. (optarg or getopt).
  2) Live monitoring of /proc/net/tcp that updates every 2-3 seconds instead of a static capture.
  3) DNS name resolution.

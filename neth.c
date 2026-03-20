@@ -7,6 +7,24 @@
 #include <ctype.h>
 #include <limits.h>
 
+int hash_func(uint32_t node, int table_size){
+    return node % table_size;
+}
+
+struct hashtable* create_table(int table_size){
+    struct hashtable *ht = calloc(1,sizeof(struct hashtable)); 
+    ht->bucket_arr = calloc(table_size, sizeof(struct key_val *));
+    ht->size = table_size;
+    return ht;
+}
+
+void insert_node(struct hashtable* yea,uint32_t in, uint32_t pi){
+    int index = in % yea->size;
+    struct key_val no;
+      
+}
+
+
 int is_numeric(const char* str){
 
     int i=0;

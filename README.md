@@ -1,7 +1,7 @@
 # net.c
 
 ## Purpose
-This project is a learing journal of sorts, it started before my Data Structures course Spring of 26, and as I learn more I update this project with what I learned in/out of class whenever I have the time.
+This project is a learning journal of sorts, it started before my Data Structures course Spring of 26, and as I learn more I update this project with what I learned in/out of class whenever I have the time.
 
 ## Update March 19th 2026
 - Moved utility functions outside of net.c and into neth.c, and the prototype functions into neth.h as well as struct type and defines.

@@ -77,10 +77,12 @@ int main(int argc, char* argv[]){
         printf("\n");
         }
 	else if(mode == 2 && connections[i].state_int == 0x01){
-	    printf("test");
+		print(connections[i].local_ip,connections[i].remote_ip,connections[i].local_port,connections[i].remote_port,state_translation(connections[i].state_int),get_pid_by_inode(connections[i].inode));
+	    printf("\n");
 	    }
 	else if(mode == 3 && connections[i].state_int == 0x0A){
-	    printf("test");
+		print(connections[i].local_ip,connections[i].remote_ip,connections[i].local_port,connections[i].remote_port,state_translation(connections[i].state_int),get_pid_by_inode(connections[i].inode));
+	    printf("\n");
 		}
 	}
 

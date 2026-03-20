@@ -17,9 +17,9 @@ gcc -o net net.c neth.c
 
 ## Basic usage: 
 ```bash
- ./net.out -a : List all connections regardless of state.
- ./net.out -t : List connections with "ESTABLISHED" state.
- ./net.out -l : List connections with "LISTENING" state.
+ ./net -a : List all connections regardless of state.
+ ./net -t : List connections with "ESTABLISHED" state.
+ ./net -l : List connections with "LISTENING" state.
 ```
 ## To be implemented:
 
